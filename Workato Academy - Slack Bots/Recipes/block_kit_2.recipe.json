@@ -1,0 +1,128 @@
+{
+  "name": "Block Kit #2",
+  "description": "",
+  "version": 6,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "slack_bot",
+    "name": "bot_command_v2",
+    "as": "57615c00",
+    "keyword": "trigger",
+    "toggleCfg": {
+      "domain": false,
+      "name": false,
+      "scope": false
+    },
+    "input": {
+      "allow_dialog": "true",
+      "domain": "Open",
+      "name": "Modal",
+      "scope": "Example"
+    },
+    "extended_output_schema": [
+      {
+        "label": "Parameters",
+        "name": "parameters",
+        "properties": [
+
+        ],
+        "type": "object"
+      }
+    ],
+    "block": [
+      {
+        "number": 1,
+        "provider": "slack_bot",
+        "name": "block_kit_modals",
+        "as": "e193b86c",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "view.submit_view.bot_command": "test block kit"
+        },
+        "toggleCfg": {
+          "modal_action_type": true,
+          "view.submit_view.bot_command": true
+        },
+        "input": {
+          "modal_action_type": "open",
+          "view": {
+            "modal_title": "Modal Example",
+            "blocks": [
+              {
+                "block_type": "section_with_text",
+                "section_text": "This is a Section with Text"
+              },
+              {
+                "block_type": "plain_text_input",
+                "label_text": "Single-line input",
+                "block_id": "singleline",
+                "placeholder_text": "Type something"
+              },
+              {
+                "block_type": "multiline_plain_text_input",
+                "label_text": "Multi-line input",
+                "block_id": "multiline",
+                "placeholder_text": "Type something"
+              },
+              {
+                "block_type": "checkboxes_input",
+                "label_text": "Checkboxes",
+                "block_id": "checkboxes",
+                "options": [
+                  {
+                    "title": "Checkbox #1",
+                    "value": "Checkbox #1"
+                  },
+                  {
+                    "title": "Checkbox #2",
+                    "value": "Checkbox #2"
+                  }
+                ]
+              },
+              {
+                "block_type": "select_menu_input",
+                "label_text": "Select menu",
+                "block_id": "selectmenu",
+                "placeholder_text": "Select something",
+                "menu_type": "users_select"
+              },
+              {
+                "block_type": "multi_select_menu_input",
+                "label_text": "Multi-select menu",
+                "block_id": "multiselectmenu",
+                "placeholder_text": "Select something",
+                "menu_type": "multi_users_select"
+              }
+            ],
+            "submit_view": {
+              "continue_flow": "false",
+              "bot_command": {
+                "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_1.recipe.json",
+                "name": "Block Kit #1",
+                "folder": "Workato Academy - Slack Bots/Recipes"
+              },
+              "submit_text": "Submit",
+              "close_text": "Close"
+            }
+          }
+        },
+        "uuid": "0822ed6e-9ffe-4298-b354-77a338398b25"
+      }
+    ],
+    "uuid": "dd1c6ef4-837e-4a17-8bd7-f45d4535441e"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "slack_bot",
+      "skip_validation": false,
+      "account_id": {
+        "zip_name": "Workato Academy - Slack Bots/Connections/my_workbot_for_slack_account.connection.json",
+        "name": "My Workbot for Slack account",
+        "folder": "Workato Academy - Slack Bots/Connections"
+      }
+    }
+  ]
+}

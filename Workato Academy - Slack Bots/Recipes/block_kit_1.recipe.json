@@ -1,0 +1,224 @@
+{
+  "name": "Block Kit #1",
+  "description": "",
+  "version": 10,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "slack_bot",
+    "name": "bot_command_v2",
+    "as": "c45439df",
+    "keyword": "trigger",
+    "toggleCfg": {
+      "domain": false,
+      "name": false,
+      "scope": false
+    },
+    "input": {
+      "allow_dialog": "true",
+      "domain": "test",
+      "name": "block",
+      "scope": "kit"
+    },
+    "extended_output_schema": [
+      {
+        "label": "Parameters",
+        "name": "parameters",
+        "properties": [
+
+        ],
+        "type": "object"
+      }
+    ],
+    "block": [
+      {
+        "number": 1,
+        "provider": "slack_bot",
+        "name": "post_bot_message",
+        "as": "52c807ee",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "blocks.3.actions.0.bot_command": "open modal example",
+          "blocks.3.actions.1.bot_command": "open modal example",
+          "blocks.4.bot_command": "open modal example",
+          "blocks.3.actions.2.options.0.bot_command": "open modal example",
+          "blocks.3.actions.2.options.1.bot_command": "open modal example",
+          "blocks.3.actions.2.options.2.bot_command": "open modal example",
+          "blocks.3.actions.3.bot_command": "open modal example",
+          "blocks.3.actions.5.options.0.bot_command": "open modal example",
+          "blocks.3.actions.5.options.1.bot_command": "open modal example"
+        },
+        "toggleCfg": {
+          "channel": true,
+          "blocks.3.actions.0.style": true,
+          "blocks.3.actions.0.bot_command": true,
+          "blocks.3.actions.1.style": true,
+          "blocks.3.actions.1.bot_command": true,
+          "blocks.4.bot_command": true,
+          "blocks.3.actions.2.options.0.bot_command": true,
+          "blocks.3.actions.2.options.1.bot_command": true,
+          "blocks.3.actions.2.options.2.bot_command": true,
+          "blocks.3.actions.5.options.0.bot_command": true,
+          "blocks.3.actions.5.options.1.bot_command": true
+        },
+        "input": {
+          "channel": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"slack_bot\",\"line\":\"c45439df\",\"path\":[\"context\",\"channel\"]}')}",
+          "blocks": [
+            {
+              "button_type": "continue_flow",
+              "block_type": "section_with_text",
+              "section_text": "This is a Section with Text"
+            },
+            {
+              "button_type": "continue_flow",
+              "block_type": "section_with_fields",
+              "section_text": "This is a section with fields section text",
+              "attachment_fields": [
+                {
+                  "title": "*First Name*\n",
+                  "value": "Mickey"
+                },
+                {
+                  "title": "*Last Name*\n",
+                  "value": "Mouse"
+                },
+                {
+                  "title": "*Company*",
+                  "value": "Disney"
+                }
+              ]
+            },
+            {
+              "button_type": "continue_flow",
+              "block_type": "section_with_image",
+              "section_text": "This is a ' Section with Image '",
+              "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ac/Modern_Mickey_Mouse.png",
+              "alt_text": "Mickey Mouse"
+            },
+            {
+              "button_type": "continue_flow",
+              "block_type": "actions",
+              "actions": [
+                {
+                  "button_type": "bot_command",
+                  "type": "button_with_long_action",
+                  "button_title": "Approve",
+                  "bot_command": {
+                    "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                    "name": "Block Kit #2",
+                    "folder": "Workato Academy - Slack Bots/Recipes"
+                  },
+                  "style": "primary"
+                },
+                {
+                  "button_type": "bot_command",
+                  "type": "button_with_long_action",
+                  "button_title": "Reject",
+                  "bot_command": {
+                    "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                    "name": "Block Kit #2",
+                    "folder": "Workato Academy - Slack Bots/Recipes"
+                  },
+                  "style": "danger"
+                },
+                {
+                  "button_type": "continue_flow",
+                  "type": "select_menu",
+                  "placeholder_text": "Select a movie",
+                  "menu_type": "static_select",
+                  "options": [
+                    {
+                      "title": "Movie #1",
+                      "bot_command": {
+                        "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                        "name": "Block Kit #2",
+                        "folder": "Workato Academy - Slack Bots/Recipes"
+                      }
+                    },
+                    {
+                      "title": "Movie #2",
+                      "bot_command": {
+                        "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                        "name": "Block Kit #2",
+                        "folder": "Workato Academy - Slack Bots/Recipes"
+                      }
+                    },
+                    {
+                      "title": "Movie #3",
+                      "bot_command": {
+                        "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                        "name": "Block Kit #2",
+                        "folder": "Workato Academy - Slack Bots/Recipes"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "button_type": "continue_flow",
+                  "type": "datepicker",
+                  "placeholder_text": "date",
+                  "bot_command": {
+                    "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                    "name": "Block Kit #2",
+                    "folder": "Workato Academy - Slack Bots/Recipes"
+                  }
+                },
+                {
+                  "button_type": "continue_flow"
+                },
+                {
+                  "button_type": "continue_flow",
+                  "type": "overflow_menu",
+                  "options": [
+                    {
+                      "title": "Option #1",
+                      "bot_command": {
+                        "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                        "name": "Block Kit #2",
+                        "folder": "Workato Academy - Slack Bots/Recipes"
+                      }
+                    },
+                    {
+                      "title": "Option #2",
+                      "bot_command": {
+                        "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                        "name": "Block Kit #2",
+                        "folder": "Workato Academy - Slack Bots/Recipes"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "button_type": "bot_command",
+              "block_type": "section_with_button_with_long_action",
+              "section_text": "This is a section with button",
+              "button_title": "Section with button Button",
+              "bot_command": {
+                "zip_name": "Workato Academy - Slack Bots/Recipes/block_kit_2.recipe.json",
+                "name": "Block Kit #2",
+                "folder": "Workato Academy - Slack Bots/Recipes"
+              }
+            }
+          ]
+        },
+        "uuid": "329da491-3427-43b1-a5c6-7e33ed71d12e"
+      }
+    ],
+    "uuid": "e8b7ba32-18e9-47c4-9ecc-1daa27edf98d"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "slack_bot",
+      "skip_validation": false,
+      "account_id": {
+        "zip_name": "Workato Academy - Slack Bots/Connections/my_workbot_for_slack_account.connection.json",
+        "name": "My Workbot for Slack account",
+        "folder": "Workato Academy - Slack Bots/Connections"
+      }
+    }
+  ]
+}

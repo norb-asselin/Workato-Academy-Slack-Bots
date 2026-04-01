@@ -1,7 +1,7 @@
 {
   "name": "Block Kit #1",
   "description": "",
-  "version": 10,
+  "version": 11,
   "private": true,
   "concurrency": 1,
   "code": {
@@ -23,11 +23,9 @@
     },
     "extended_output_schema": [
       {
+        "extends_schema": false,
         "label": "Parameters",
         "name": "parameters",
-        "properties": [
-
-        ],
         "type": "object"
       }
     ],
@@ -63,7 +61,7 @@
           "blocks.3.actions.5.options.1.bot_command": true
         },
         "input": {
-          "channel": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"slack_bot\",\"line\":\"c45439df\",\"path\":[\"context\",\"channel\"]}')}",
+          "channel": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"slack_bot\",\"line\":\"c45439df\",\"path\":[\"context\", \"channel\"]}')}",
           "blocks": [
             {
               "button_type": "continue_flow",
@@ -204,10 +202,14 @@
             }
           ]
         },
-        "uuid": "329da491-3427-43b1-a5c6-7e33ed71d12e"
+        "comment": "Post a custom Slack bot message to the channel specified in the triggered event, with multiple interactive elements like text sections, fields, images, buttons, dropdown menus, and date pickers.",
+        "uuid": "329da491-3427-43b1-a5c6-7e33ed71d12e",
+        "skip": false
       }
     ],
-    "uuid": "e8b7ba32-18e9-47c4-9ecc-1daa27edf98d"
+    "comment": "Trigger based on a specific bot command event in Slack.",
+    "uuid": "e8b7ba32-18e9-47c4-9ecc-1daa27edf98d",
+    "skip": false
   },
   "config": [
     {
